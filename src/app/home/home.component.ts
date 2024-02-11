@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
@@ -19,4 +21,9 @@ export class HomeComponent implements OnInit {
     
   }
 
+  public resetName():void{
+    console.log('resetName');
+    this.name = '';
+  }
+  
 }
