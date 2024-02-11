@@ -14,7 +14,7 @@ import { FormsModule } from '@angular/forms';
 export class HomeComponent implements OnInit {
 
   name = 'Duc Dev';
-  public age = 15;
+  public age = 0;
   
   constructor(){}
   ngOnInit(): void {
@@ -25,5 +25,6 @@ export class HomeComponent implements OnInit {
     console.log('resetName');
     this.name = '';
   }
+
   
 }
