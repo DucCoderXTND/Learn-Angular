@@ -12,13 +12,18 @@
       </tr>
       <tr *ngFor="let trai of traiCay2; let i = index" class="center">
         <td>{{ i + 1 }}</td>
-        <td>{{ trai.ten }}</td>
+        <td>{{ trai.ten |uppercase }}</td>
         <td>
           <!-- ngClass khi chay no se xet cai class cua minh bang dieu kien ben trong -->
-          <span [ngClass]="{ so_am: trai.gia < 0 }">{{ trai.gia }}</span>
+          <span [ngClass]="{ so_am: trai.gia < 0 }">{{ trai.gia | currency: 'VND' : 'symbol' : '1.2' }}</span>
         </td>
         <td>
-          <span *ngIf="trai.haGia">Đang hạ giá</span>
+          <!-- Sử dụng ng generate pipe OnSale để tạo một cái OnSale định dạng dữ liệu cho haGia
+          nó sẽ tạo ra 2 cái file on-sale.pipe.ts và on-sale.pipe.spect.ts
+          Đơn giản là ta tạo 1 cái pipe riêng và khi dùng thì ta chỉ cần kêu pipe ơi t bỏ value vô ống đó và 
+          cái đầu kia nó ra gì là tùy theo khách hàng
+          -->
+          <span>{{trai.haGia | onSale | uppercase}}</span>
         </td>
       </tr>
     </tbody>
