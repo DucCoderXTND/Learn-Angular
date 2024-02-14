@@ -2,7 +2,7 @@
   <h3>Day la component home</h3>
   <h1>Trái cây</h1>
 
-  <table class="table2">
+  <!-- <table class="table2">
     <tbody>
       <tr>
         <th>Thứ tự</th>
@@ -14,18 +14,25 @@
         <td>{{ i + 1 }}</td>
         <td>{{ trai.ten |uppercase }}</td>
         <td>
-          <!-- ngClass khi chay no se xet cai class cua minh bang dieu kien ben trong -->
           <span [ngClass]="{ so_am: trai.gia < 0 }">{{ trai.gia | currency: 'VND' : 'symbol' : '1.2' }}</span>
         </td>
-        <td>
-          <!-- Sử dụng ng generate pipe OnSale để tạo một cái OnSale định dạng dữ liệu cho haGia
-          nó sẽ tạo ra 2 cái file on-sale.pipe.ts và on-sale.pipe.spect.ts
-          Đơn giản là ta tạo 1 cái pipe riêng và khi dùng thì ta chỉ cần kêu pipe ơi t bỏ value vô ống đó và 
-          cái đầu kia nó ra gì là tùy theo khách hàng
-          -->
+        <td>    
           <span>{{trai.haGia | onSale | uppercase}}</span>
         </td>
       </tr>
     </tbody>
-  </table>
+  </table> -->
+  Tỉnh / Thành Phố:
+  <select name="" id="city" (change)="changeCity($event)">
+    <option *ngFor="let data of vietNamData" value="{{ data.city }}">
+      {{ data.city }}
+    </option>
+  </select>
+  <br />
+  Quận / Huyện:
+  <select name="" id="district">
+    <option *ngFor="let district of districts" value="district">
+      {{ district }}
+    </option>
+  </select>
 </div>
