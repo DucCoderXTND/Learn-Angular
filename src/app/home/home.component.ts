@@ -4,27 +4,22 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule
-  ],
+  imports: [CommonModule, FormsModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit {
-
   name = 'Duc Dev';
   public age = 0;
-  
-  constructor(){}
-  ngOnInit(): void {
-    
-  }
+  public traiCay = ['Tao', 'Nho','Cam'];
+  public traiCay2 = [
+    { ten: 'Tao', gia: 123, haGia: true },
+    { ten: 'Nho', gia: -4, haGia: false },
+    { ten: 'Cam', gia: -4, haGia: true}
+  ];
 
-  public resetName():void{
-    console.log('resetName');
-    this.name = '';
+  constructor() {}
+  public ngOnInit(): void {
+    console.log('Trai cay = ', this.traiCay2);
   }
-
-  
 }

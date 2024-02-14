@@ -1,17 +1,26 @@
 <div class="test">
   <h3>Day la component home</h3>
-  <h2>Chao ban {{ name }}</h2>
-  <input type="text" [(ngModel)]="age" />
-  
-  <!-- <h2 *ngIf="age > 18">Bạn quá già rồi</h2>
-  <h2 *ngIf="age <=18">Bạn còn trẻ lắm</h2> -->
+  <h1>Trái cây</h1>
 
-  <div *ngIf="age <= 18; then tre; else gia"></div>
-  
-  <ng-template #tre>
-    <h2>Bạn còn trẻ lắm</h2>
-  </ng-template>
-  <ng-template #gia>
-    <h2>Bạn quá già rồi</h2>
-  </ng-template>
+  <table class="table2">
+    <tbody>
+      <tr>
+        <th>Thứ tự</th>
+        <th>Tên</th>
+        <th>Gía</th>
+        <th>Đại hạ giá</th>
+      </tr>
+      <tr *ngFor="let trai of traiCay2; let i = index" class="center">
+        <td>{{ i + 1 }}</td>
+        <td>{{ trai.ten }}</td>
+        <td>
+          <!-- ngClass khi chay no se xet cai class cua minh bang dieu kien ben trong -->
+          <span [ngClass]="{ so_am: trai.gia < 0 }">{{ trai.gia }}</span>
+        </td>
+        <td>
+          <span *ngIf="trai.haGia">Đang hạ giá</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
