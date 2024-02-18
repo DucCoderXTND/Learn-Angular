@@ -1,0 +1,24 @@
+<div class="test">
+  <table class="table2">
+    <tbody>
+      <tr>
+        <th>Thứ tự</th>
+        <th>Tên</th>
+        <th>Gía</th>
+        <th>Đại hạ giá</th>
+      </tr>
+      <tr *ngFor="let trai of traiCay2; let i = index" class="center">
+        <td>{{ i + 1 }}</td>
+        <td>{{ trai.ten | uppercase }}</td>
+        <td>
+          <span [ngClass]="{ so_am: trai.gia < 0 }">{{
+            trai.gia | currency : "VND" : "symbol" : "1.2"
+          }}</span>
+        </td>
+        <td>
+          <span>{{ trai.haGia | onSale | uppercase }}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
