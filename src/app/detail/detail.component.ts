@@ -7,9 +7,10 @@ import { OnSalePipe } from '../on-sale.pipe';
   standalone: true,
   imports: [CommonModule, FormsModule, OnSalePipe],
   templateUrl: './detail.component.html',
-  styleUrl: './detail.component.css'
+  styleUrl: './detail.component.css',
 })
 export class DetailComponent implements OnInit {
+  constructor() {}
   public traiCay2 = [
     { ten: 'Tao', gia: 123, haGia: true },
     { ten: 'Nho', gia: -4, haGia: false },
@@ -19,5 +20,4 @@ export class DetailComponent implements OnInit {
   ngOnInit(): void {
     console.log('data = ', this.traiCay2);
   }
-
 }
