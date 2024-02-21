@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { OnSalePipe } from '../on-sale.pipe';
+import { CommonService } from '../Service/common.service';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -53,9 +54,15 @@ export class HomeComponent implements OnInit {
       ],
     },
   ];
-  constructor() {}
+  public couter = 0;
+  public counterBinhPhuong = 0;
+  constructor(private common: CommonService) {}
   public ngOnInit(): void {
     console.log('Viet Nam data = ', this.vietNamData);
+    console.log("HomeComponent ngOninit =", this.common.getCounter());
+    this.couter = this.common.counter;
+    this.counterBinhPhuong = this.common.BinhPhuong(this.couter);
+    this.common.counter++;
   }
   public changeCity(event: any): void {
     const city = event.target.value;
