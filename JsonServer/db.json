@@ -1,12 +1,64 @@
 {
   "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" },
-    { "id": 2, "title": "json-server", "author": "typicode" }
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "json-server",
+      "author": "typicode"
+    }
   ],
   "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment 2", "postId": 2 },
-    { "id": 3, "body": "some comment 3", "postId": 2 }
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "some comment 2",
+      "postId": 2
+    },
+    {
+      "id": 3,
+      "body": "some comment 3",
+      "postId": 2
+    },
+    {
+      "id": "a350",
+      "body": "Duc dep trai",
+      "postId": 1
+    },
+    {
+      "id": "ee90",
+      "body": "Duc dep trai",
+      "postId": 1
+    },
+    {
+      "id": "5482",
+      "body": "Duc dep trai",
+      "postId": 1
+    },
+    {
+      "id": "784f",
+      "body": "Nam nay thanh cong",
+      "postId": 1
+    },
+    {
+      "id": "a05e",
+      "body": "Nam nay thanh cong",
+      "postId": 1
+    },
+    {
+      "id": "7575",
+      "body": "Nam nay thanh cong1",
+      "postId": 1
+    }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "name": "typicode"
+  }
 }

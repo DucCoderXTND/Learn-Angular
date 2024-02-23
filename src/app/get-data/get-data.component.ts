@@ -17,8 +17,8 @@ export class GetDataComponent implements OnInit {
       console.log('data', data);
     });
 
-    this.httpServerService.getRandomUsers(5).subscribe((data) => {
-      console.log('getRandomUsers', data.results);
-    });
+    // this.httpServerService.getRandomUsers(5).subscribe((data) => {
+    //   console.log('getRandomUsers', data.results);
+    // });
   }
 }
